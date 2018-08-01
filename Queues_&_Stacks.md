@@ -71,7 +71,7 @@ int main()
 }
 ```
 ### OUTPUT
-```cpp
+```
 
 Adding '10' to Queue ...
 Current Queue Status = [10]
@@ -91,3 +91,5 @@ Adding '7' to Queue ...
 Queue is Full
 Exit code: 0 (normal program termination)
 ```
+
+It is important to note that once the queue is full and we dequeue it, even though the queue length is less than the queue structure size, we can't enqueue any more elements. This is a major drawback of the typical queue structure. 
