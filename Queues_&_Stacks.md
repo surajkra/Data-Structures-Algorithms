@@ -11,3 +11,83 @@ Represents the insertion operation in a queue structure. A new element is always
 
 ### DEQUEUE Operation
 Represents the deletion operation in a queue structure. The first element is always removed in this DEQUEUE operation. "front" is updated after the deletion.
+
+### Typical Implementation
+Consider this code, where we implement the Queue structure as arrays,
+
+```cpp
+#include <iostream>
+#include <string>
+const int max_size = 4;
+int front = 0;
+int rear = 0;
+
+void display(int data[max_size])
+{   std::cout<<"\nCurrent Queue Status = " ;
+    for(int i=front;i<rear;i++)
+    {   std::cout << data[i]<<" ";
+    }
+    std::cout<<"\nCurrent Queue  = "<<rear-front;
+}
+
+void enqueue(int data[max_size], int element)
+{
+    if(rear == max_size-1)
+    {   std::cout<<"\nQueue is Full";
+    }
+    else
+    {   data[rear] = element;
+        rear++;
+        display(data);
+    }    
+}
+
+void dequeue(int data[max_size])
+{
+    if(front == rear)
+    {   std::cout<<"\nEmpty Queue";
+    }
+    else
+    {   data[front]=0;
+        front++;
+        display(data);
+    }
+}
+
+int main()
+{   int data[max_size];
+    std::cout<<"\nAdding '10' to Queue";
+    enqueue(data,10);
+    std::cout<<"\nAdding '5' to Queue";
+    enqueue(data,5);
+    std::cout<<"\nAdding '3' to Queue";
+    enqueue(data,3);
+    std::cout<<"\nDequeuing...";    
+    dequeue(data);
+    std::cout<<"\nAdding '6' to Queue";
+    enqueue(data,6);
+    std::cout<<"\nAdding '7' to Queue";
+    enqueue(data,7);
+}
+```
+### OUTPUT
+```cpp
+
+Adding '10' to Queue ...
+Current Queue Status = [10]
+Current Queue  = 1
+Adding '5' to Queue ...
+Current Queue Status = [10 5]
+Current Queue  = 2
+Adding '3' to Queue ...
+Current Queue Status = [10 5 3]
+Current Queue  = 3
+Dequeuing ...
+Current Queue Status = [5 3]
+Current Queue  = 2
+Adding '6' to Queue ...
+Queue is Full
+Adding '7' to Queue ...
+Queue is Full
+Exit code: 0 (normal program termination)
+```
