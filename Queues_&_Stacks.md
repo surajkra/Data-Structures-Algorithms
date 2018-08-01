@@ -4,7 +4,7 @@ Queues are a type of Data Structure which follow the FIFO principle (First-in-Fi
 
 *Queue Structure:*
 
-![alt text](Queue_Structure.JPG)
+![alt text](Pictures/Queue_Structure.JPG)
 
 ### ENQUEUE Operation
 Represents the insertion operation in a queue structure. A new element is always added at the end of the Queue. "rear" is updated after the addition.
@@ -92,4 +92,7 @@ Queue is Full
 Exit code: 0 (normal program termination)
 ```
 
-It is important to note that once the queue is full and we dequeue it, even though the queue length is less than the queue structure size, we can't enqueue any more elements. This is a major drawback of the typical queue structure. 
+It is important to note that once the queue is full and we dequeue it, even though the queue length is less than the queue structure size, we can't enqueue any more elements. This is a major drawback of the typical queue structure.
+*Queue Structure:*
+
+![alt text](Pictures/Queue_Implementation_Drawback.JPG)
