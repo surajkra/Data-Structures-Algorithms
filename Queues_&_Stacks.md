@@ -70,7 +70,7 @@ int main()
     enqueue(data,7);
 }
 ```
-### OUTPUT
+#### OUTPUT
 ```
 
 Adding '10' to Queue ...
@@ -92,7 +92,10 @@ Queue is Full
 Exit code: 0 (normal program termination)
 ```
 
-It is important to note that once the queue is full and we dequeue it, even though the queue length is less than the queue structure size, we can't enqueue any more elements. This is a major drawback of the typical queue structure.
-*Queue Structure:*
+It is important to note that once the queue is full and we dequeue it, even though the queue length is less than the queue structure size, we can't enqueue any more elements. Once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue. This is a major drawback of the typical queue structure.
+
+*Queue Drawback:*
 
 ![alt text](Pictures/Queue_Implementation_Drawback.JPG)
+
+To overcome this disadvantage, circular queues are used.
