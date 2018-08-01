@@ -18,7 +18,7 @@ Consider this code, where we implement the Queue structure as arrays,
 ```cpp
 #include <iostream>
 #include <string>
-const int max_size = 4;
+const int max_size = 3;
 int front = 0;
 int rear = 0;
 
@@ -32,7 +32,7 @@ void display(int data[max_size])
 
 void enqueue(int data[max_size], int element)
 {
-    if(rear == max_size-1)
+    if(rear == max_size)
     {   std::cout<<"\nQueue is Full";
     }
     else
